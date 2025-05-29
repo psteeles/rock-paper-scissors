@@ -12,3 +12,4 @@ e:\dev\bootcamp\rock-paper-scissors\obj\Debug\net9.0\refint\rock-paper-scissors.
 e:\dev\bootcamp\rock-paper-scissors\obj\Debug\net9.0\rock-paper-scissors.pdb
 e:\dev\bootcamp\rock-paper-scissors\obj\Debug\net9.0\rock-paper-scissors.genruntimeconfig.cache
 e:\dev\bootcamp\rock-paper-scissors\obj\Debug\net9.0\ref\rock-paper-scissors.dll
+E:\dev\bootcamp\rock-paper-scissors\obj\Debug\net9.0\rock-paper-scissors.sourcelink.json

@@ -6,13 +6,12 @@
         {
             Random rand = new Random();
             int choice = rand.Next(1, 4);
-            if (choice == 1)
+            switch (choice)
             {
-                return "ROCK";
-            }
-            else if (choice == 2)
-            {
-                return "PAPER";
+                case 1:
+                    return "ROCK";
+                case 2:
+                    return "PAPER";
             }
             return "SCISSORS";
         }
@@ -22,15 +21,34 @@
             while (true)
             {
                 Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
-                string userInput = Console.ReadLine()!.Trim().ToUpper();
+                string userInput = Console.ReadLine().Trim().ToUpper();
 
                 if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS")
                 {
                     return userInput;
                 }
+
+                else if (userInput == "R")
+                {
+                    userInput = "ROCK";
+                    return userInput;
+                }
+
+                else if (userInput == "P")
+                {
+                    userInput = "PAPER";
+                    return userInput;
+                }
+
+                else if (userInput == "S")
+                {
+                    userInput = "SCISSORS";
+                    return userInput;
+                }
+
                 else
                 {
-                    Console.WriteLine("Didn't understand, try again.");
+                    Console.WriteLine("Didn't understand, try again.\n");
                 }
             }
         }
@@ -38,27 +56,27 @@
 
         static void PlayGame(string playerChoice, string computerChoice)
         {
-            Console.WriteLine($"You chose {playerChoice}");
-            Console.WriteLine($"I chose {computerChoice}");
+            Console.WriteLine($"\nYou chose {playerChoice}");
+            Console.WriteLine($"I chose {computerChoice}\n");
             if (playerChoice == computerChoice)
             {
-                Console.WriteLine("It's a draw!");
+                Console.WriteLine("It's a draw!\n");
             }
             else if (playerChoice == "ROCK" && computerChoice == "SCISSORS")
             {
-                Console.WriteLine("You win!");
+                Console.WriteLine("You win!\n");
             }
             else if (playerChoice == "PAPER" && computerChoice == "ROCK")
             {
-                Console.WriteLine("You win!");
+                Console.WriteLine("You win!\n");
             }
             else if (playerChoice == "SCISSORS" && computerChoice == "PAPER")
             {
-                Console.WriteLine("You win!");
+                Console.WriteLine("You win!\n");
             }
             else
             {
-                Console.WriteLine("I win!");
+                Console.WriteLine("I win!\n");
             }
         }
 
